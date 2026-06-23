@@ -7,6 +7,12 @@ the user's terminal year, determine the exact time remaining relative to the cur
 #include <stdio.h>
 char patientName;
 int yearInstalled;
+int expirationYear;
+int currentYear;
+int timeRemaining;
+char bioStatus;
+
+
 
 === APEX CYBERNETICS DIAGNOSTICS ===
 Scanning host integration data...
