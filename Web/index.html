@@ -22,6 +22,19 @@
       <form id="installationForm">
         <div class="input-group">
           <label for="patientName">Patient Name: </label>
+          <input
+            type="text"
+            id="patientName"
+            placeholder="Enter name..."
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="birthdate">Patient's Date of Birth: </label>
+          <input type="date" id="birthdate" required />
+          <button type="submit" class="btn-verify">
+            Run Compatibility Scan
+          </button>
         </div>
       </form>
     </div>
