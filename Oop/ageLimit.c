@@ -13,22 +13,37 @@ int timeRemaining;
 char bioStatus;
 int main()
 {
-
     printf("== = CYBERNETICS DIAGNOSTICS == =\n");
     printf("Scanning host integration data...\n");
-    printf("Enter patient's name:");
+    printf("Enter patient's name: ");
     scanf("%s", patientName);
     printf("Enter your year of implant installation: \n");
     scanf("%d", &yearInstalled);
     printf("Enter the current year: \n");
     scanf("%d", &currentYear);
     printf("-- -DIAGNOSTIC REPORT : %s-- -\n", patientName);
+
+    expirationYear = yearInstalled + 13;
+    timeRemaining = expirationYear - currentYear;
     printf("                       Installation Year: %d Expiration Year: %d\n", yearInstalled, expirationYear);
 
     printf("                       System Timeline: %d years remaining.\n", timeRemaining);
-    printf("                       Biostatus Check: %c \n", bioStatus);
-    printf("                       Micro-cellular degradation detected.Mild biological fatigue.-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --");
+    printf("                       Biostatus Check: ");
 
-    timeRemaining = expirationYear - currentYear;
+    if (timeRemaining > 10)
+    {
+        printf("Peak.\n");
+    }
+    else if (timeRemaining > 5)
+    {
+        printf("Stable.\n");
+    }
+    else
+    {
+        printf("Critical.\n");
+    }
+
+    printf("                       Micro-cellular degradation detected.Mild biological fatigue.-- -- -- -- -- -- -- -- -- -- -- -- -- -- --");
+
     return 0;
 }
